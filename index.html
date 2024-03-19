@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+        .container{
+            display: grid;
+            text-align: center;
+            place-content: center;         
+            min-height: 100vh;
+            animation: loncatloncat 3s infinite;
+           
+        }
+        .title{
+            font-size: 5rem;
+            color: #eaeaea;
+            text-shadow: 1px 1px 2px black;
+        }
+        .wrapping{
+            display: flex;
+            gap: 100px;
+            
+        }
+        .card-weater{
+            background-color: crimson;
+            padding: 20px 50px;
+            color: #eaeaea;
+            text-shadow: 1px 1px 1px black;
+            box-shadow: 0 0 0 2px red;      
+        }
+        .card-weater h1{        
+          font-size: 40px;
+        }
+        .card-weater h3{        
+          font-size: 30px;
+        }
+
+        .card-weater:hover{
+            background-color: #eaeaea;
+            color: crimson;
+            transition: 0.3s all ease-in-out;
+        }
+
+        @keyframes loncatloncat{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Assignment 3</h1>
+        <div class="wrapping">
+            <div class="card-weater">
+                <h1 class="weater">Water</h1>
+                <h3 class="weater-status">{{ .Water }} | {{ .WaterStatus }}</h3>
+            </div>
+            <div class="card-weater">
+                <h1 class="weater">Wind</h1>
+                <h3 class="weater-status">{{ .Wind }} | {{ .WindStatus }}</h3>
+            </div>
+        </div> 
+    </div>   
+</body>
+</html>
